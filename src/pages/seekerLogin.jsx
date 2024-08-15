@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './seekerLogin.css';
 
 
 const seekerLogin = () => {
+
+  const [input, setInput] = useState ({
+    email: '',
+    password: '',
+  })
+
+
   return (
         <div className="seekerLogin">
 
@@ -14,18 +21,18 @@ const seekerLogin = () => {
             <form>
           {/* Email input */}
                 <div data-mdb-input-init className="form-outline mb-4">
-                  <label className="form-label" htmlFor="form2Example1">
+                  <label className="form-label" htmlFor="example1">
                     Email address
                   </label>
-                  <input type="email" id="form2Example1" className="form-control" />
+                  <input name='email' value={input.email} onChange={(e) => setInput({...input, [e.target.name] : e.target.value,}) } type="email" id="example1" className="form-control" />
                 </div>
 
                 {/* Password input */}
                 <div data-mdb-input-init className="form-outline mb-4">
-                  <label className="form-label" htmlFor="form2Example2">
+                  <label className="form-label" htmlFor="example2">
                     Password
                   </label>
-                  <input type="password" id="form2Example2" className="form-control" />
+                  <input name='password' value={input.password} onChange={(e) => setInput({...input, [e.target.name] : e.target.value,}) } type="password" id="example2" className="form-control" />
                 </div>
 
                 {/* 2 column grid layout for inline styling */}
@@ -39,10 +46,10 @@ const seekerLogin = () => {
                 </div>
 
                 {/* Submit button */}
-                <button type="submit" className="btn btn-primary btn-block mb-4">
-                  Sign in
-                </button>
 
+                <Link to="/home-page" className='btn btn-primary btn-block mb-4' role='button' >
+                         Sign in 
+                </Link>
                 {/* Register buttons */}
                 <div className="text-center">
                   <p>
