@@ -14,7 +14,7 @@ body {
 }
 
 /* Container for the entire login section */
-.seekerLogin {
+.registration {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,12 +22,12 @@ body {
 }
 
 /* Container for the card */
-.seekerLogin .container {
+.registration .container {
   max-width: 500px;
   padding: 2rem;
 }
 
-.seekerLogin h2 {
+.registration h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #000;
@@ -37,34 +37,34 @@ body {
 }
 
 
-.seekerLogin .card {
+.registration .card {
   padding: 2rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.seekerLogin .form-label {
+.registration .form-label {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
-.seekerLogin .form-control {
+.registration .form-control {
   padding: 0.75rem 1rem;
   border-radius: 4px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
 }
 
-.seekerLogin .form-check-input {
+.registration .form-check-input {
   margin-right: 0.5rem;
 }
 
-.seekerLogin .form-check-label {
+.registration .form-check-label {
   font-weight: 500;
 }
 
-.seekerLogin .btn-primary {
+.registration .btn-primary {
   width: 100%;
   padding: 0.75rem;
   border-radius: 4px;
@@ -77,35 +77,35 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.seekerLogin .btn-primary:hover {
+.registration .btn-primary:hover {
   background-color: #0056b3;
 }
 
-.seekerLogin .text-center {
+.registration .text-center {
   margin-top: 1rem;
   font-size: 0.9rem;
 }
 
-.seekerLogin .text-center p {
+.registration .text-center p {
   margin-bottom: 0.5rem;
 }
 
-.seekerLogin .text-center p .btn .btn-link {
+.registration .text-center p .btn .btn-link {
   color: #007bff;
   padding-left: 20px;
   text-decoration: none;
 }
 
-.seekerLogin .text-center p .btn-link:hover {
+.registration  .text-center p .btn-link:hover {
   color: #0056b3;
 }
 
-.seekerLogin .btn-floating {
+.registration .btn-floating {
   font-size: 1.25rem;
   color: #007bff;
   margin: 0 0.25rem;
 }
 
-.seekerLogin .btn-floating:hover {
+.registration .btn-floating:hover {
   color: #0056b3;
 }

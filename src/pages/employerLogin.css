@@ -14,7 +14,7 @@ body {
 }
 
 /* Container for the entire login section */
-.seekerLogin {
+.employerLogin {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,12 +22,12 @@ body {
 }
 
 /* Container for the card */
-.seekerLogin .container {
+.employerLogin .container {
   max-width: 500px;
   padding: 2rem;
 }
 
-.seekerLogin h2 {
+.employerLogin h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #000;
@@ -37,34 +37,34 @@ body {
 }
 
 
-.seekerLogin .card {
+.employerLogin .card {
   padding: 2rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.seekerLogin .form-label {
+.employerLogin .form-label {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
-.seekerLogin .form-control {
+.employerLogin .form-control {
   padding: 0.75rem 1rem;
   border-radius: 4px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
 }
 
-.seekerLogin .form-check-input {
+.employerLogin .form-check-input {
   margin-right: 0.5rem;
 }
 
-.seekerLogin .form-check-label {
+.employerLogin .form-check-label {
   font-weight: 500;
 }
 
-.seekerLogin .btn-primary {
+.employerLogin .btn-primary {
   width: 100%;
   padding: 0.75rem;
   border-radius: 4px;
@@ -77,35 +77,35 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.seekerLogin .btn-primary:hover {
+.employerLogin .btn-primary:hover {
   background-color: #0056b3;
 }
 
-.seekerLogin .text-center {
+.employerLogin .text-center {
   margin-top: 1rem;
   font-size: 0.9rem;
 }
 
-.seekerLogin .text-center p {
+.employerLogin .text-center p {
   margin-bottom: 0.5rem;
 }
 
-.seekerLogin .text-center p .btn .btn-link {
+.employerLogin .text-center p .btn .btn-link {
   color: #007bff;
   padding-left: 20px;
   text-decoration: none;
 }
 
-.seekerLogin .text-center p .btn-link:hover {
+.employerLogin .text-center p .btn-link:hover {
   color: #0056b3;
 }
 
-.seekerLogin .btn-floating {
+.employerLogin .btn-floating {
   font-size: 1.25rem;
   color: #007bff;
   margin: 0 0.25rem;
 }
 
-.seekerLogin .btn-floating:hover {
+.employerLogin .btn-floating:hover {
   color: #0056b3;
 }

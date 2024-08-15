@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
-import './seekerLogin.css';
+import './Registration.css';
 
-
-const seekerLogin = () => {
+const Registration = () => {
   return (
-        <div className="seekerLogin">
+    <div className='registration'>
+      <div className="container">
 
-          <div className="container">
-
-          <h2>Login as Job Seeker</h2>
-            <div className="card">
-            <form>
-          {/* Email input */}
+        <h2>Registration</h2>
+        <div className="card">
+          <form>
+                {/* Email input */}
                 <div data-mdb-input-init className="form-outline mb-4">
                   <label className="form-label" htmlFor="form2Example1">
                     Email address
@@ -46,10 +44,7 @@ const seekerLogin = () => {
                 {/* Register buttons */}
                 <div className="text-center">
                   <p>
-                    Don't have an account? 
-                    <Link to="/register" className='btn btn-Link' role='button' style={{color: "#007bff"}} >
-                          Register
-                    </Link>
+                    Don't have an account? <a href="#!">Register</a>
                   </p>
                   <button type="button" className="btn btn-link btn-floating mx-1">
                     <i className="fab fa-facebook-f"></i>
@@ -68,15 +63,15 @@ const seekerLogin = () => {
                   </button>
                 </div>
 
-               <Link to="/login-employer" className='btn btn-primary btn-block mb-4' role='button'>
+              <Link to="/login-employer" className='btn btn-primary btn-block mb-4' role='button'>
                     Login as Employer
-               </Link>
-            </form>
-            </div>
-          </div>
-
+              </Link>
+          </form>
         </div>
-  );
-};
+      </div>
 
-export default seekerLogin;
+    </div>
+  )
+}
+
+export default Registration

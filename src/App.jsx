@@ -1,15 +1,26 @@
 import {useState} from 'react';
-// import EmployerLogin from './Pages/EmployerLogin';
-import SeekerLogin from './Pages/SeekerLogin';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import EmployerLogin from './pages/employerLogin';
+import SeekerLogin from './pages/seekerLogin';
+import Registration from './pages/Registration';
 import './App.css'
 
 function App() {
 
   return (
-    <>
-      {/* <EmployerLogin/> */}
-      <SeekerLogin/>
-    </>
+
+    <BrowserRouter>
+
+
+    {/* App Routes */}
+    <Routes>
+
+      <Route path="/login-employer" element={<EmployerLogin />} />
+      <Route path="/" element={<SeekerLogin />} />
+      <Route path='/register' element={<Registration/>} />
+
+    </Routes>
+  </BrowserRouter>
 
   )
 }
