@@ -10,6 +10,26 @@ const Registration = () => {
         <h2>Registration</h2>
         <div className="card">
           <form>
+
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline">
+                      <label class="form-label" for="form3Example1">
+                        First name
+                      </label>
+                      <input type="text" id="form3Example1" class="form-control" />
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline">
+                      <label class="form-label" for="form3Example2">
+                        Last name
+                      </label>
+                      <input type="text" id="form3Example2" class="form-control" />
+                     
+                    </div>
+                </div>
+
                 {/* Email input */}
                 <div data-mdb-input-init className="form-outline mb-4">
                   <label className="form-label" htmlFor="form2Example1">
@@ -26,46 +46,20 @@ const Registration = () => {
                   <input type="password" id="form2Example2" className="form-control" />
                 </div>
 
-                {/* 2 column grid layout for inline styling */}
-                <div className="row mb-4">
-                
-
-                  <div className="col">
-                    {/* Simple link */}
-                    <a href="#!">Forgot password?</a>
-                  </div>
+                <div data-mdb-input-init className="form-outline mb-4">
+                  <label className="form-label" htmlFor="form2Example3">
+                    Conform Password
+                  </label>
+                  <input type="password" id="form2Example3" className="form-control" />
                 </div>
 
-                {/* Submit button */}
-                <button type="submit" className="btn btn-primary btn-block mb-4">
-                  Sign in
-                </button>
-
-                {/* Register buttons */}
-                <div className="text-center">
-                  <p>
-                    Don't have an account? <a href="#!">Register</a>
-                  </p>
-                  <button type="button" className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-facebook-f"></i>
-                  </button>
-
-                  <button type="button" className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-google"></i>
-                  </button>
-
-                  <button type="button" className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-twitter"></i>
-                  </button>
-
-                  <button type="button" className="btn btn-link btn-floating mx-1">
-                    <i className="fab fa-github"></i>
-                  </button>
-                </div>
+                 
 
               <Link to="/login-employer" className='btn btn-primary btn-block mb-4' role='button'>
-                    Login as Employer
+                    Registration
               </Link>
+
+
           </form>
         </div>
       </div>
