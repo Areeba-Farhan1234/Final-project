@@ -1,5 +1,5 @@
 import React from 'react';
-import "./home.css";
+import "./styles.css";
 
 const Home = () => {
   return (
@@ -31,7 +31,7 @@ const Home = () => {
             <td>faiza@gmail.com</td>
             <td>03874959268</td>
             <td className="table-action">
-              <a href="#edit" className="action-icon"><i class="fa-solid fa-pencil"></i> </a>
+              <a href="#edit" className="action-icon"><i className="fa-solid fa-pencil"></i> </a>
               <a href="#delete" className="action-icon"><i className="fa-solid fa-trash"></i> </a>
             </td>
           </tr>
@@ -42,7 +42,7 @@ const Home = () => {
             <td>arshadali@gmail.com</td>
             <td>03911264785</td>
             <td className="table-action">
-            <a href="#edit" className="action-icon"><i class="fa-solid fa-pencil"></i> </a>
+            <a href="#edit" className="action-icon"><i className="fa-solid fa-pencil"></i> </a>
             <a href="#delete" className="action-icon"><i className="fa-solid fa-trash"></i> </a>
             </td>
           </tr>
@@ -55,7 +55,7 @@ const Home = () => {
             <td>zoya@gmail.com</td>
             <td>03116749773</td>
             <td className="table-action">
-            <a href="#edit" className="action-icon"><i class="fa-solid fa-pencil"></i> </a>
+            <a href="#edit" className="action-icon"><i className="fa-solid fa-pencil"></i> </a>
             <a href="#delete" className="action-icon"><i className="fa-solid fa-trash"></i> </a>
             </td>
           </tr>
@@ -68,7 +68,7 @@ const Home = () => {
             <td>saniakhan@gmail.com</td>
             <td>03113495773</td>
             <td className="table-action">
-            <a href="#edit" className="action-icon"><i class="fa-solid fa-pencil"></i> </a>
+            <a href="#edit" className="action-icon"><i className="fa-solid fa-pencil"></i> </a>
             <a href="#delete" className="action-icon"><i className="fa-solid fa-trash"></i> </a>
             </td>
           </tr>
