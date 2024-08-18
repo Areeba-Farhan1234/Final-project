@@ -34,18 +34,18 @@ const employerLogin = () => {
                 <form onSubmit={handleLogin}>
               {/* Email input */}
                     <div data-mdb-input-init className="form-outline mb-4">
-                      <label className="form-label" htmlFor="example1">
+                      <label className="form-label" for="example1">
                         Email address
                       </label>
-                      <input name='email' value={input.email} onChange={(e) => setInput({...input, [e.target.name] : e.target.value,}) } type="email" id="example1" className="form-control" />
+                      <input name='email' autoComplete='email' value={input.email} onChange={(e) => setInput({...input, [e.target.name] : e.target.value,}) } type="email" id="example1" className="form-control" />
                     </div>
 
                     {/* Password input */}
                     <div data-mdb-input-init className="form-outline mb-4">
-                      <label className="form-label" htmlFor="example2">
+                      <label className="form-label" for="example2">
                         Password
                       </label>
-                      <input name='password' value={input.password} onChange={(e) => setInput({...input, [e.target.name] : e.target.value,}) } type="password" id="example2" className="form-control" />
+                      <input name='password' autoComplete='password' value={input.password} onChange={(e) => setInput({...input, [e.target.name] : e.target.value,}) } type="password" id="example2" className="form-control" />
                     </div>
 
                     {/* 2 column grid layout for inline styling */}
