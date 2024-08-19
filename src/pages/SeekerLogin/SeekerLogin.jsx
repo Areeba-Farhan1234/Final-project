@@ -102,9 +102,9 @@ const SeekerLogin = () => {
 
             {/* Submit button */}
 
-            <button className="btn btn-primary btn-block" role="button" type="submit">
-              Sign in
-            </button>
+            <Link to="/seeker-page" className="btn btn-primary btn-block" role="button">
+              Sgin In
+            </Link>
 
             {/* Register buttons */}
             <div className="text-center">

@@ -102,9 +102,9 @@ const employerLogin = () => {
 
             {/* Submit button */}
 
-            <button className="btn btn-primary btn-block" role="button" type="submit">
-              Sign in
-            </button>
+            <Link to="/home-page" className="btn btn-primary btn-block" role="button">
+              Sgin In
+            </Link>
 
             {/* Register buttons */}
             <div className="text-center">
