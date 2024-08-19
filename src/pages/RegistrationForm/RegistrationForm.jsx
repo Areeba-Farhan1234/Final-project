@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import "./styles.css";
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { addUser, getUsers } from "../../helper/localStorage";
 
@@ -105,7 +105,6 @@ const RegistrationForm = () => {
                 <input
                   name="name"
                   value={formData.name}
-                  autoComplete="name"
                   onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
                   type="text"
                   id="fullName"
@@ -144,7 +143,6 @@ const RegistrationForm = () => {
               <input
                 name="email"
                 value={formData.email}
-                autoComplete="email"
                 onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value.toLowerCase().trim() })}
                 type="email"
                 id="emailField"
@@ -162,7 +160,6 @@ const RegistrationForm = () => {
               <input
                 name="password"
                 value={formData.password}
-                autoComplete="password"
                 onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
                 type="password"
                 id="passField"
@@ -180,7 +177,6 @@ const RegistrationForm = () => {
               <input
                 name="confirmPassword"
                 value={formData.confirmPassword}
-                autoComplete="conformPassword"
                 onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
                 type="password"
                 id="confirmPassword"
@@ -191,14 +187,9 @@ const RegistrationForm = () => {
             </div>
 
             {/* Submit button */}
-            {/* <button className="btn btn-primary btn-block" role="button" type="submit">
+            <button className="btn btn-primary btn-block" role="button" type="submit">
               Register
-            </button> */}
-            
-            <Link to="/login-employer" className='btn btn-primary btn-block mb-4' role='button' type='submit'>
-                    Registration
-            </Link>
-
+            </button>
           </form>
         </div>
       </div>

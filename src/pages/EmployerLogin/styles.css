@@ -1,43 +1,77 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image: url("../images/bg2.jpg");
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .employerLogin {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(135deg, #007bff, #00bde3);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  margin: 20px;
 }
 
-/* Container for the card */
 .employerLogin .container {
-  max-width: 500px;
-  padding: 2rem;
+  width: 100%;
 }
 
 .employerLogin h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #000;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
   text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
+.employerLogin h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .employerLogin .card {
-  padding: 2rem;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .employerLogin .form-label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-weight: 600;
+  color: #333;
 }
 
 .employerLogin .form-control {
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.employerLogin .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
 .employerLogin .form-check-input {
@@ -50,46 +84,66 @@
 
 .employerLogin .btn-primary {
   width: 100%;
-  padding: 0.75rem;
-  border-radius: 4px;
+  padding: 0.9rem;
+  border-radius: 5px;
   background-color: #007bff;
   border: none;
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .employerLogin .btn-primary:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .employerLogin .text-center {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
 }
 
 .employerLogin .text-center p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .employerLogin .text-center p .btn .btn-link {
   color: #007bff;
-  padding-left: 20px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .employerLogin .text-center p .btn-link:hover {
   color: #0056b3;
+  text-decoration: underline;
 }
 
 .employerLogin .btn-floating {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #007bff;
-  margin: 0 0.25rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .employerLogin .btn-floating:hover {
   color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .employerLogin {
+    padding: 2rem;
+    margin: 10px;
+  }
+  
+  .employerLogin h2 {
+    font-size: 2rem;
+  }
+  
+  .employerLogin .card {
+    padding: 2rem;
+  }
 }

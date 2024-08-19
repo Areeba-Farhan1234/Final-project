@@ -6,8 +6,7 @@ const AuthContext = createContext();
 // Auth Provider component
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState({ role: "employer" });
-  console.log("🚀 ~ AuthProvider ~ user:", user);
+  const [user, setUser] = useState(null);
 
   const login = (userData) => {
     setIsAuthenticated(true);

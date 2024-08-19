@@ -1,12 +1,12 @@
-import "./styles.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+import "./styles.css";
 import { getUsers } from "../../helper/localStorage";
 import { useAuth } from "../../hoc/AuthProvider";
 
-const EmployerLogin = () => {
+const employerLogin = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -74,7 +74,6 @@ const EmployerLogin = () => {
               <input
                 name="email"
                 value={formData.email}
-                autoComplete="email"
                 onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
                 type="email"
                 id="email"
@@ -92,7 +91,6 @@ const EmployerLogin = () => {
               <input
                 name="password"
                 value={formData.password}
-                autoComplete="password"
                 onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
                 type="password"
                 id="password"
@@ -104,9 +102,9 @@ const EmployerLogin = () => {
 
             {/* Submit button */}
 
-            <Link to="/home-page" className='btn btn-primary btn-block mb-4' role='button' >
-                         Sign in 
-            </Link>
+            <button className="btn btn-primary btn-block" role="button" type="submit">
+              Sign in
+            </button>
 
             {/* Register buttons */}
             <div className="text-center">
@@ -128,4 +126,4 @@ const EmployerLogin = () => {
   );
 };
 
-export default EmployerLogin;
+export default employerLogin;

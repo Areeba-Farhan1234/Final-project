@@ -7,4 +7,13 @@ const addUser = (newUser) => {
   localStorage.setItem("users", JSON.stringify([...previousUsers, newUser]));
 };
 
-export { getUsers, addUser };
+const getJobs = () => {
+  return JSON.parse(localStorage.getItem("jobs"));
+};
+
+const addJob = (newJob, isArray) => {
+  const previousUsers = JSON.parse(localStorage.getItem("jobs")) || [];
+  localStorage.setItem("jobs", JSON.stringify(isArray ? newJob : [...previousUsers, newJob]));
+};
+
+export { getUsers, addUser, getJobs, addJob };
