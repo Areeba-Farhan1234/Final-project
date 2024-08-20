@@ -31,7 +31,7 @@ This is a comprehensive Job Board Platform built using React and Vite, with rout
 ### 2. Navigate to the project directory:
 
 ```bash
-cd react-feedback-system
+cd Project
 ```
 
 ### 3. Install dependencies:
@@ -49,11 +49,34 @@ yarn install
 ### 4. Start the development server:
 
 ```bash
-npm start
+npm run dev
 ```
 
 #### or
 
 ```bash
-yarn start
+yarn run dev
 ```
+
+
+## Available Routes
+/login-employer: Employer login page.
+/: Job seeker login page.
+/register: Registration form for new users.
+/employer-dashboard: Dashboard for employers (protected route).
+/seeker-dashboard: Dashboard for job seekers (protected route).
+Protected Routes
+The application uses a ProtectedRoute higher-order component to manage access to specific routes based on user roles. The ProtectedRoute component checks the user's role and determines whether to grant access to a route.
+
+## Contributing
+If you would like to contribute to this project, feel free to fork the repository and submit a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+## Acknowledgements
+React
+Vite
+React Router
+Redux Toolkit (if applicable)
+Any other libraries or tools used in the project
