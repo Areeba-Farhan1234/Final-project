@@ -57,10 +57,10 @@ yarn run dev
 ## Available Routes
 -**/login-employer:** Employer login page.
 -**/: Job seeker:** login page.
-/register: Registration form for new users.
-/employer-dashboard: Dashboard for employers (protected route).
-/seeker-dashboard: Dashboard for job seekers (protected route).
-Protected Routes
+-**/register:** Registration form for new users.
+-**/employer-dashboard:** Dashboard for employers (protected route).
+-**/seeker-dashboard:** Dashboard for job seekers (protected route).
+-**Protected Routes:**
 The application uses a ProtectedRoute higher-order component to manage access to specific routes based on user roles. The ProtectedRoute component checks the user's role and determines whether to grant access to a route.
 
 ## Contributing
