@@ -130,7 +130,7 @@ const JobCard = ({ data, setJobs }) => {
           <p>
             <strong>Salary: </strong> {data?.salary}rs
           </p>
-          <button className={`btn btn-${data?.applied ? "secondary" : "success"}`} onClick={onApplyClick} disabled={data?.applied}>
+          <button className={`btn btn-${data?.applied ? "secondary" : "info"}`} onClick={onApplyClick} disabled={data?.applied}>
             {data?.applied ? "Applied" : "Apply now"}
           </button>
         </div>
