@@ -14,17 +14,12 @@ This is a comprehensive Job Board Platform built using React and Vite, with rout
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (>= 14.x)
-- npm or yarn
-
 ### Installation
 
 ### 1. Clone the repository:
 
 ```bash
-   git clone : https://github.com/Areeba-Farhan1234/Final-project.git
+git clone : https://github.com/Areeba-Farhan1234/Final-project.git
 
    ```
 
@@ -60,8 +55,8 @@ yarn run dev
 
 
 ## Available Routes
-/login-employer: Employer login page.
-/: Job seeker login page.
+-**/login-employer:** Employer login page.
+-**/: Job seeker:** login page.
 /register: Registration form for new users.
 /employer-dashboard: Dashboard for employers (protected route).
 /seeker-dashboard: Dashboard for job seekers (protected route).
