@@ -70,8 +70,11 @@ If you would like to contribute to this project, feel free to fork the repositor
 This project is licensed under the MIT License.
 
 ## Acknowledgements
-React
-Vite
-React Router
-Redux Toolkit (if applicable)
-Any other libraries or tools used in the project
+
+- React
+- Vite
+- React Router
+- Redux Toolkit (if applicable)
+- Any other libraries or tools used in the project
+
+
