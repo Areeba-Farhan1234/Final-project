@@ -1,8 +1,27 @@
-# React + Vite
+# Job Board Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a comprehensive Job Board Platform built using React and Vite, with routes managed by `react-router-dom`. The application includes features for both job seekers and employers, offering authentication, role-based access control, and distinct dashboards for each user type.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `App.jsx`: The main entry point of the application that sets up routing for different pages.
+- `hoc/ProtectedRoutes.jsx`: Higher-order component to handle route protection based on user roles.
+- `pages/EmployerLogin/EmployerLogin.jsx`: Component for the employer login page.
+- `pages/SeekerLogin/SeekerLogin.jsx`: Component for the job seeker login page.
+- `pages/RegistrationForm/RegistrationForm.jsx`: Component for the user registration page.
+- `pages/EmployerDashboard/EmployerDashboard.jsx`: Component for the employer dashboard, accessible only to authenticated employers.
+- `pages/SeekerDashboard/SeekerDashboard.jsx`: Component for the job seeker dashboard, accessible only to authenticated seekers.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (>= 14.x)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/job-board-platform.git
