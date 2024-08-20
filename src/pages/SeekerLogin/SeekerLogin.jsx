@@ -57,11 +57,11 @@ const SeekerLogin = () => {
     const seeker = findSeeker();
     login(seeker);
     alert("Successfully signin");
-    navigate("/home-seeker");
+    navigate("/seeker-dashboard");
   };
 
   return (
-    <div className="seekerLogin">
+    <div className="seekerLogin" data-aos="fade-right">
       <div className="container">
         <h2>Login as Job Seeker</h2>
         <div className="card">
@@ -102,9 +102,9 @@ const SeekerLogin = () => {
 
             {/* Submit button */}
 
-            <Link to="/seeker-page" className="btn btn-primary btn-block" role="button">
-              Sgin In
-            </Link>
+            <button className="btn btn-primary btn-block" role="button" type="submit">
+              Sign in
+            </button>
 
             {/* Register buttons */}
             <div className="text-center">

@@ -91,7 +91,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="registration">
+    <div className="registration" data-aos="zoom-in">
       <div className="container">
         <h2>Registration Page</h2>
         <div className="card">

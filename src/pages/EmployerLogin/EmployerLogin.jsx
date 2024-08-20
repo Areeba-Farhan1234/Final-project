@@ -61,7 +61,7 @@ const employerLogin = () => {
   };
 
   return (
-    <div className="employerLogin">
+    <div className="employerLogin" data-aos="fade-left">
       <div className="container">
         <h2>Login as Job Employer</h2>
         <div className="card">
@@ -102,9 +102,9 @@ const employerLogin = () => {
 
             {/* Submit button */}
 
-            <Link to="/home-page" className="btn btn-primary btn-block" role="button">
-              Sgin In
-            </Link>
+            <button className="btn btn-primary btn-block" role="button" type="submit">
+              Sign in
+            </button>
 
             {/* Register buttons */}
             <div className="text-center">
