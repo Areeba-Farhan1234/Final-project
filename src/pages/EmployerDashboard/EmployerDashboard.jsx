@@ -99,12 +99,12 @@ function EmployerDashboard() {
           <div className="table-title">
             <div className="row my-3">
               <div className="col-12 col-sm-6 text-bold">
-                <h2>
-                  <strong>Employer Dashboard</strong>
+                <h2 data-aos="fade-left">
+                  <strong  style={{color:"#0d6efd"}} >Employer Dashboard</strong>
                 </h2>
               </div>
               <div className="col-12 col-sm-6 d-flex gap-2 justify-content-sm-end">
-                <button className="btn btn-success" data-bs-toggle="modal" data-bs-target="#employerModal">
+                <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#employerModal">
                   <i className="bi bi-plus-circle-fill me-2"></i>
                   <span>Add New Employee</span>
                 </button>
@@ -113,11 +113,24 @@ function EmployerDashboard() {
                 </button>
               </div>
             </div>
-            <select value={selectedCategory} onChange={handleCategoryChange}>
-              <option value="">All Categories</option>
-              <option value="Technology">Technology</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Finance">Finance</option>
+            <select value={selectedCategory}
+             onChange={handleCategoryChange} 
+             style={{
+              padding: "0.5rem 1rem",
+              borderRadius: "5px",
+              border: "1px solid #ccc",
+              fontSize: "1rem",
+              color: "#333",
+              backgroundColor: "#fff",
+              cursor: "pointer",
+              outline: "none",
+              width: "100%", // Adjust the width as needed
+            }}
+             >
+              <option value="" style={{ color: "#888", fontWeight: "600" }}>All Categories</option>
+              <option value="Technology" style={{ color: "#888", fontWeight: "400" }}>Technology</option>
+              <option value="Marketing" style={{ color: "#888", fontWeight: "400" }}>Marketing</option>
+              <option value="Finance" style={{ color: "#888", fontWeight: "400" }}>Finance</option>
             </select>
           </div>
           {jobs.length > 0 ? (
