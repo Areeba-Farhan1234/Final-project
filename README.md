@@ -21,7 +21,39 @@ This is a comprehensive Job Board Platform built using React and Vite, with rout
 
 ### Installation
 
-1. Clone the repository:
+### 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/yourusername/job-board-platform.git
+```bash
+   git clone : https://github.com/Areeba-Farhan1234/Final-project.git
+
+   ```
+
+### 2. Navigate to the project directory:
+
+```bash
+cd react-feedback-system
+```
+
+### 3. Install dependencies:
+
+```bash
+npm install
+```
+
+#### or
+
+```bash
+yarn install
+```
+
+### 4. Start the development server:
+
+```bash
+npm start
+```
+
+#### or
+
+```bash
+yarn start
+```
