@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 
-import { addJob, getJobs } from "../../helper/localStorage"; // Import helper functions for interacting with local storage
-import { useAuth } from "../../hoc/AuthProvider"; // Import custom hook to manage authentication
+import { addJob, getJobs } from "../../helper/localStorage";
+import { useAuth } from "../../hoc/AuthProvider"; 
 
 function EmployerDashboard() {
-  // State hooks
-  const [modalData, setModalData] = useState({}); // State for holding form data to add or edit a job
-  const [jobs, setJobs] = useState(getJobs() ? getJobs() : []); // State to hold the list of jobs, initialized from local storage
-  const [editIndex, setEditIndex] = useState(undefined); // State to track the index of the job being edited
-  const [selectedCategory, setSelectedCategory] = useState(""); // State to track the selected category for filtering jobs
+ 
+  const [modalData, setModalData] = useState({}); 
+  const [jobs, setJobs] = useState(getJobs() ? getJobs() : []); 
+  const [editIndex, setEditIndex] = useState(undefined);
+  const [selectedCategory, setSelectedCategory] = useState(""); 
 
-  const { user, logout } = useAuth(); // Destructure user and logout function from authentication context
+  const { user, logout } = useAuth(); 
 
-  // Handle category filter change
+ 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
 
-  // Filter jobs based on selected category
+  
   const filteredJobs = jobs.filter((job) => selectedCategory === "" || job.category === selectedCategory);
 
-  // Handle form input changes
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setModalData((prev) => ({
@@ -29,50 +29,50 @@ function EmployerDashboard() {
     }));
   };
 
-  // Handle form submission for adding or updating a job
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
     let jobData;
     if (editIndex > -1) {
-      // If editing an existing job, update the corresponding job in the list
+     
       jobData = jobs.map((item, i) => (i === editIndex ? { ...item, ...modalData, userId: user.userId } : item));
-      addJob(jobData, true); // Update jobs in local storage
+      addJob(jobData, true); 
     } else {
-      // If adding a new job, create new job data
+      
       jobData = { ...modalData, userId: user.userId };
-      addJob(jobData); // Add new job to local storage
+      addJob(jobData); 
     }
-    setJobs(getJobs()); // Refresh the list of jobs from local storage
-    setModalData({}); // Reset modal data
-    const modalClose = document.querySelector('[data-bs-dismiss="modal"]'); // Close the modal
+    setJobs(getJobs()); 
+    setModalData({}); 
+    const modalClose = document.querySelector('[data-bs-dismiss="modal"]'); 
     if (modalClose) {
       modalClose.click();
     }
-    setEditIndex(undefined); // Reset edit index
+    setEditIndex(undefined);
   };
 
-  // Handle editing a job
+
   const handleEdit = (index) => {
-    const findClickedJob = jobs.find((_, i) => i == index); // Find the job to be edited
-    setModalData(findClickedJob); // Set the form data with the selected job details
-    setEditIndex(index); // Set the index for the job being edited
+    const findClickedJob = jobs.find((_, i) => i == index);
+    setModalData(findClickedJob);
+    setEditIndex(index); 
   };
 
-  // Handle deleting a job
+
   const handleDelete = (index) => {
-    const filteredJobs = jobs.filter((_, i) => index != i); // Remove the selected job from the list
-    setJobs(filteredJobs); // Update the jobs state
-    localStorage.setItem("jobs", JSON.stringify(filteredJobs)); // Save the updated jobs list to local storage
+    const filteredJobs = jobs.filter((_, i) => index != i);
+    setJobs(filteredJobs); 
+    localStorage.setItem("jobs", JSON.stringify(filteredJobs)); 
   };
 
-  // Handle canceling the modal form
+  
   const cancelModal = () => {
-    setModalData({}); // Reset modal data
-    setEditIndex(undefined); // Reset edit index
+    setModalData({});
+    setEditIndex(undefined); 
   };
 
-  // Component for rendering each job in the table
+ e
   const TableList = ({ data, index }) => {
     return (
       <tr>
@@ -124,7 +124,7 @@ function EmployerDashboard() {
               backgroundColor: "#fff",
               cursor: "pointer",
               outline: "none",
-              width: "100%", // Adjust the width as needed
+              width: "100%", 
             }}
              >
               <option value="" style={{ color: "#888", fontWeight: "600" }}>All Categories</option>

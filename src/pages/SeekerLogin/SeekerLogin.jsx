@@ -15,41 +15,41 @@ const SeekerLogin = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  // State for error messages
+  
   const [errors, setErrors] = useState({});
 
-  // Function to find the job seeker by email
+  
   const findSeeker = () => {
     return getUsers()
       .filter((user) => user.role === "seeker")
       .find((user) => user?.email === formData?.email);
   };
 
-  // Function to validate the form data
+  
   const validateForm = () => {
-    // Object to store validation errors
+    
     const newErrors = {};
     const seeker = findSeeker();
 
-    // Check if the email exists among the users
+    
     if (!seeker) {
       newErrors.email = "Invalid email";
     } else if (seeker.password !== formData?.password) {
       newErrors.password = "Invalid password";
     }
 
-    // Return the object containing all validation errors
+    
     return newErrors;
   };
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Validate the form and store any validation errors
+   
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors); // Set the errors if there are validation issues
-      return; // Stop further execution if there are errors
+      setErrors(validationErrors); 
+      return; 
     }
 
     setErrors({});

@@ -12,7 +12,7 @@ function generateUserId(length = 32) {
 }
 
 const RegistrationForm = () => {
-  // State for form data
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,69 +22,68 @@ const RegistrationForm = () => {
     userId: generateUserId(),
   });
 
-  // State for error messages
+  
   const [errors, setErrors] = useState({});
 
-  // Navigation hook to redirect users
+ 
   const navigate = useNavigate();
 
-  // Function to validate the form data
+  
   const validateForm = () => {
-    // Object to store validation errors
+   
     const newErrors = {};
 
-    // Validate full name - must be at least 6 characters
+    
     if (formData.name.length < 6) {
       newErrors.name = "Full name must be at least 6 characters";
     }
 
-    // Validate email using regex pattern
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       newErrors.email = "Invalid email address";
     }
 
-    // Validate password - must be at least 6 characters
+   
     if (formData.password.length < 6) {
       newErrors.password = "Password must be at least 6 characters";
     }
 
-    // Validate that passwords match
+    
     if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
 
-    // Check if the email already exists among the users
+    
     getUsers().forEach((user) => {
       if (user?.email === formData.email) {
         newErrors.email = "Email already exists";
       }
     });
 
-    // Return the object containing all validation errors
+    
     return newErrors;
   };
 
-  // Function to handle form submission
+  
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault();
 
-    // Validate the form and store any validation errors
+    
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors); // Set the errors if there are validation issues
-      return; // Stop further execution if there are errors
+      setErrors(validationErrors); 
+      return; 
     }
 
-    setErrors({}); // Clear errors if the form is valid
-
-    // Destructure formData to remove confirmPassword and prepare new user data
+    setErrors({}); 
+   
     const { confirmPassword, ...newFormData } = formData;
 
-    // Add the new user to the system or database
+   
     addUser(newFormData);
 
-    // Redirect to home page or another route after successful registration
+    
     navigate(`${formData?.role == "seeker" ? "/" : "/login-employer"}`);
 
     alert("User created succesfully");
