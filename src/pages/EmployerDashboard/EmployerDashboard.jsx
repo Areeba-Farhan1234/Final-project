@@ -72,7 +72,6 @@ function EmployerDashboard() {
     setEditIndex(undefined); 
   };
 
- e
   const TableList = ({ data, index }) => {
     return (
       <tr>
